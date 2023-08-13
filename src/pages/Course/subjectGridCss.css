@@ -1,0 +1,38 @@
+/* SubjectGrid.css */
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.subject-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.subject-item:hover {
+  transform: scale(1.05);
+}
+
+.subject-name {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.subject-description {
+  color: #777;
+}
+
+.subject-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}

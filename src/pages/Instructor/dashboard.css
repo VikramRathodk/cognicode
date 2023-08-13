@@ -1,0 +1,51 @@
+/* dashboard.css */
+
+.dashboard-container {
+    display: flex;
+    background-color: #f7f7f7;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sidebar {
+    flex: 1;
+    padding: 10px;
+    background-color: #988ef5;
+    color: white;
+  }
+  
+  .sidebar-heading {
+    font-size: 1.0rem;
+    margin-bottom: 50px;
+  }
+  
+  .sidebar-card {
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #382d97;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar-card:hover {
+    background-color: #6b48e8;
+  }
+  
+  .content {
+    flex: 2;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: #aeaae9;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  

@@ -1,0 +1,92 @@
+/* CourseListFromExternalApi.css */
+
+.course-list-external-api {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .course-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  
+  .course-card {
+    background-color: #fff;
+    border-radius: 10px;
+    flex: 0 0 calc(25% - 20px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .course-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  .course-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .course-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .course-details {
+    color: #555;
+    margin: 2px 0;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-enroll {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-enroll:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-view-more {
+    display: block;
+    margin: 20px auto;
+    background-color: #6c757d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
+  
+  .btn-view-more:hover {
+    background-color: #5a6268;
+  }
+  
