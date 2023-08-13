@@ -47,7 +47,7 @@ const CourseListFromExternalApi = () => {
                 <p className="course-details">Price: {course.price}</p>
                 <a
                   href={baseUrl + course.url}
-                  target="blank"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="enroll-link"
                 >
