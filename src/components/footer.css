@@ -1,0 +1,15 @@
+/* footer.css */
+
+
+.footer {
+    background-color: #f1efef;
+    color: rgb(12, 11, 11);
+    text-align: center;
+    padding: 30px; /* Adjust padding as needed */
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Align the left edge of the footer */
+    right: 0; /* Align the right edge of the footer */
+  }
+  
