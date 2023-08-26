@@ -48,6 +48,7 @@
 // export default CourseForm;
 import React, { useState } from 'react';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 import "./courseForm.css"
 
 const CourseForm = () => {
@@ -64,7 +65,9 @@ const CourseForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const courseId = uuidv4();
     const courseData = {
+      courseId,
       title,
       description,
       price,

@@ -1,0 +1,57 @@
+/* landingpage.css */
+
+body {
+  background-image: url('/public/assets/back.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+}
+
+.content-container {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.425);
+  border-radius: 10px;
+}
+
+.cogni-code {
+  display: block;
+}
+
+.content p {
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(240, 152, 44);
+}
+
+.moto {
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(125, 219, 243);
+}
+
+.login-button {
+  text-decoration: none;
+}
+
+.login-button button {
+  background-color: #fd89ea;
+  color: rgb(15, 11, 11);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.login-button button:hover {
+  background-color: #f5f4a8;
+}

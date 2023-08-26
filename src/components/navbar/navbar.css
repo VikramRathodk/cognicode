@@ -1,21 +1,20 @@
 /* navbar.css */
 .nav-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Change to space-between */
   align-items: center;
-  background-color: #c2c2e7;
-  color: rgb(8, 0, 0);
-  padding: 10px 20px;
-  margin-left: 2px;
-  margin-right: 2px;
-  border-radius: 10px;
-  box-shadow: 0 10px 10px rgba(151, 151, 233, 0.2);
+  background-color: #101631;
+  color: #f1e9e9;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  
+#title {
+  font-size: 36px;
+  text-align: center;
+  padding: 20px;
 }
-p{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+
 .nav-list {
   list-style: none;
   display: flex;
@@ -25,42 +24,37 @@ p{
 }
 
 .nav-item {
-  font-size: 16px;
+  font-size: 20px;
+  border: none;
 }
 
 .nav-link {
   text-decoration: none;
-  color: rgb(3, 0, 0);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  transition: color 0.3s ease; 
-
+  color: #dddfec;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  background-color: rgb(151, 151, 233);
-  color: #321ee7;
-  border-radius: 10px;
-  padding: 10px;
-  border: none;
+  color: #99eb6a;
 }
 
 button {
-  background-color: rgb(151, 151, 233);
+  background-color: rgb(16, 22, 49);
   border: none;
   border-radius: 10px;
+  padding: 10px 20px; /* Added padding for a more comfortable click area */
   cursor: pointer;
-  color: black;
+  color: #ffffff; /* Changed text color to white */
   font-size: 16px;
-  transition: color 0.3s ease; 
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
 button:hover {
-  background-color: rgb(138, 138, 226);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #1e2ad1;
-  border:none;
+  background-color:rgb(42, 50, 92);
+  color: #99eb6a;
+  border: none;
 }
 
 /* Media queries for responsiveness */

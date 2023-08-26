@@ -4,7 +4,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import "./courseListFromExternalApi.css";
-import CourseDetails from "./courseDetials";
 
 const CourseListFromExternalApi = () => {
   const [courses, setCourses] = useState([]);

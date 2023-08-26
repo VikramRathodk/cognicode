@@ -25,5 +25,23 @@ router.post('/add', async (req, res) => {
       res.status(500).json({ error: 'An error occurred while fetching courses' });
     }
   });
+
+  router.get('/fetchFromDb/:courseId', async (req, res) => {
+    try {
+      // Get the courseId from URL parameter
+      const courseId = req.params.courseId; 
+      const course = await Course.findOne({ courseId }); 
+  
+      if (!course) {
+        return res.status(404).json({ error: 'Course not found' });
+      }
+  
+      res.status(200).json(course);
+    } catch (error) {
+      console.error('Error fetching course:', error);
+      res.status(500).json({ error: 'An error occurred while fetching the course' });
+    }
+  });
+
   
 module.exports = router;

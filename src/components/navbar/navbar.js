@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <>
       <div className="nav-wrapper">
-        <p>CogniCode</p>
+        <p id="title">CogniCode</p>
         <nav>
           <div>
             <ul className="nav-list">

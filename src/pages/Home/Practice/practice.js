@@ -4,6 +4,7 @@ import Assignments from "./assignment";
 import Quizzes from "./quizes";
 import Navbar from "../../../components/navbar/navbar";
 import "./practice.css"; 
+import CodingChallenges from "./codingchallenges";
 
 const Practice = () => {
   const [activeTab, setActiveTab] = useState("quizzes");
@@ -29,10 +30,17 @@ const Practice = () => {
         >
           Assignments
         </button>
+        <button
+          className={activeTab === "Coding" ? "active" : ""}
+          onClick={() => handleTabChange("Coding")}
+        >
+          Assignments
+        </button>
       </div>
       <div className="content">
         {activeTab === "assignments" && <Assignments />}
         {activeTab === "quizzes" && <Quizzes  />}
+        {activeTab === "coding" && <CodingChallenges  />}
       </div>
       
     </>
@@ -40,3 +48,11 @@ const Practice = () => {
 };
 
 export default Practice;
+
+
+//remainder 
+
+//coding Challenge  are not visible 
+//shift the codingchanlange folder from home page to practice page
+
+

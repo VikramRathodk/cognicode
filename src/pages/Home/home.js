@@ -99,6 +99,10 @@ import Navbar from "../../components/navbar/navbar";
 import SearchBar from "./components/search/searchbar";
 import Footer from "./components/Footer/footer";
 import Banner from "./components/Banner/banner";
+import CourseList from "../Course/MongoBackendApi/courseList"
+import Testimonials from "./components/testimonials";
+import "./home.css"
+import CodingChallenges from "./Practice/codingchallenges";
 
 const HomePage = () => {
   const items = ["Apple", "Banana", "Cherry", "Grapes", "Orange", "Peach"];
@@ -147,7 +151,19 @@ const HomePage = () => {
       <div className="imageBanner">
         <Banner images={images} />{" "}
       </div>
-      <p>Popular Course</p>
+      <section className="popular-courses-section">
+        <h2>Popular Courses</h2>
+        <div className="popular-courses">
+          <CourseList  />
+      
+        </div>
+      </section>
+      
+      <section className="testimonial-section">
+        <h2>What Our Students Are Saying</h2>
+        <Testimonials />
+      </section>
+      
       <Footer />
     </>
   );

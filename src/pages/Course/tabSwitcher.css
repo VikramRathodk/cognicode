@@ -3,6 +3,7 @@
 .course-tab-switcher {
     font-family: Arial, sans-serif;
     padding: 20px;
+    background-color: #181f39;
   }
   
   .tabs {
@@ -32,7 +33,7 @@
   }
   
   .tab-content {
-    background-color: #fff;
+    background-color: #181f39;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;

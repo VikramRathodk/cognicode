@@ -20,7 +20,11 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
+     
         <Route path="/login" element={<Login/>}/>
+
+   
+
         <Route path="/Registration" element={<Registration/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/idashboard" element={<Dashboard/>}/>
@@ -28,7 +32,7 @@ function App() {
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/Practice" element={<Practice/>}/>
         <Route path="/contact" element={<Contact/>}/>
-        <Route path="/course" element={<CoursesRoutes />}/>
+        <Route path="/course/*" element={<CoursesRoutes />}/>
        
       </Routes>
     </Router>

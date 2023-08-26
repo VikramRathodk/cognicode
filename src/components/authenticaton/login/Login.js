@@ -8,7 +8,7 @@ import "./login.css";
 
 const Login = () => {
   const [user, setUser] = useState(new User("", "", "", ""));
-  const [selectedRole, setSelectedRole] = useState(""); // State variable for role selection
+  const [selectedRole, setSelectedRole] = useState(""); 
 
   const history = useNavigate();
 
@@ -51,6 +51,7 @@ const Login = () => {
             onChange={(e) =>
               setUser({ ...user, email: e.target.value })
             }
+            placeholder="Enter Email"
             required
           />
         </div>
@@ -62,6 +63,7 @@ const Login = () => {
             onChange={(e) =>
               setUser({ ...user, password: e.target.value })
             }
+            placeholder="Enter Password "
             required
           />
         </div>

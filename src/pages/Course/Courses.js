@@ -1,19 +1,21 @@
 import React from "react";
-import Navbar  from "../../components/navbar/navbar";
+import Navbar from "../../components/navbar/navbar";
 
 import CourseTabSwitcher from "./tabSwitcher";
+import "./course.css";
 
 const Courses = () => {
   return (
     <>
-       <div>
-          <Navbar/>
+     
+        <div>
+          <Navbar />
         </div>
-     
-      <div>
-      <CourseTabSwitcher/>
-      </div>
-     
+
+        <div className="CourseTabSwitcher">
+          <CourseTabSwitcher />
+        </div>
+   
     </>
   );
 };
