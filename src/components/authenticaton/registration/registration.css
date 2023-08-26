@@ -1,5 +1,8 @@
 /* Registration.css */
-
+body{
+  /* background-image: url('/public/assets/hand.jpg'); */
+  background-color: brown;
+}
 .container {
     max-width: 400px;
     margin: 0 auto;
@@ -11,6 +14,7 @@
   
   .form-group {
     margin-bottom: 20px;
+    font-size: 22px;
   }
   
   label {
@@ -29,8 +33,8 @@
   }
   
   button {
-    background-color: #4caf50;
-    color: white;
+    background-color:  #45a049;
+    color: rgb(5, 5, 5);
     padding: 12px 20px;
     font-size: 16px;
     border: none;
@@ -39,6 +43,10 @@
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: rgb(183, 192, 177);
   }
-  
+  .mainc:hover {
+    /* Adjust the shadow and transform on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+  }

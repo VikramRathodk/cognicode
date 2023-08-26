@@ -12,41 +12,38 @@ const Registration = () => {
     success: false,
     error: "",
   });
-  const [selectedRole, setSelectedRole] = useState(""); // State variable for role selection
-
 
   const history = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (selectedRole === "instructor" || selectedRole === "student") {
-      // Include selected role in user data
-      const userData = { ...user, role: selectedRole };
+    // console.log("Registration Details:", user);
 
-      // Sending data to the registration API
-      axios
-        .post("http://localhost:5477/auth/Register", userData)
-        .then(() => {
-          history("/Login");
-        })
-        .catch((error) => {
-          console.error("Registration failed:", error.response.data);
-          setRegistrationStatus({
-            success: false,
-            error: "Registration failed. Please try again.",
-          });
+    //sending data to api i.e from front end to back end
+
+    axios
+      .post("http://localhost:5477/Register", user)
+      .then(()=>{
+        history("/Login");
+        
+      })
+      .catch((error) => {
+        console.error("Registration failed:", error.response.data);
+        setRegistrationStatus({
+          success: false,
+          error: "Registration failed. Please try again.",
         });
+      });
 
-      setUser(new User("", "", "", ""));
-    } else {
-      // Handle role not selected
-    }
+
+    setUser(new User("", "", "", ""));
   };
 
   return (
+    <div className="mainc">
     <div className="container">
-      <h2>Registration Page</h2>
+      <h2>Hello User,</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>First Name:</label>
@@ -54,6 +51,7 @@ const Registration = () => {
             type="text"
             value={user.firstName}
             onChange={(e) => setUser({ ...user, firstName: e.target.value })}
+            placeholder="Enter your first name"
             required
           />
         </div>
@@ -63,6 +61,7 @@ const Registration = () => {
             type="text"
             value={user.lastName}
             onChange={(e) => setUser({ ...user, lastName: e.target.value })}
+            placeholder="Enter your last name"
             required
           />
         </div>
@@ -72,6 +71,7 @@ const Registration = () => {
             type="email"
             value={user.email}
             onChange={(e) => setUser({ ...user, email: e.target.value })}
+            placeholder="Enter your email"
             required
           />
         </div>
@@ -81,29 +81,17 @@ const Registration = () => {
             type="password"
             value={user.password}
             onChange={(e) => setUser({ ...user, password: e.target.value })}
+            placeholder="Enter your password"
             required
           />
         </div>
-          <label>Select Role:</label>
-          <select
-            value={selectedRole}
-            onChange={(e) => setSelectedRole(e.target.value)}
-            required
-          >
-            <option value="">Select Role</option>
-            <option value="instructor">Instructor</option>
-            <option value="student">Student</option>
-          </select>
         <button type="submit">Register</button>
       </form>
       {registrationStatus.error && <div>{registrationStatus.error}</div>}
       <Link to="/login">Login Page</Link>
     </div>
+    </div>
   );
 };
 
 export default Registration;
-
-
-
- 
