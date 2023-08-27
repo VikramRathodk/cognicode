@@ -41,7 +41,7 @@
   text-decoration: underline;
 } */
 .imageBanner{
-  background-color: #101631 !important;
+  background-color: #b32217 !important;
   display: flex;
   justify-content: center !important;
 }
@@ -65,5 +65,5 @@ color: white;
 }
 .testimonial-section h2{
 
-  color: white;
+  color: rgb(247, 245, 245);
 }

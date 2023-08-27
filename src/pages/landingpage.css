@@ -1,7 +1,7 @@
 /* landingpage.css */
 
 body {
-  background-image: url('/public/assets/back.jpg');
+  background-image: url('/public/assets/other.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,15 +11,16 @@ body {
   justify-content: center;
   align-items: center;
   font-family: cursive;
+  
 }
 
-.content-container {
+ .content-container {
   text-align: center;
   color: white;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.425);
-  border-radius: 10px;
-}
+  background-color: rgba(12, 10, 10, 0.116);
+   border-radius: 5px; 
+} 
 
 .cogni-code {
   display: block;
@@ -43,7 +44,7 @@ body {
 
 .login-button button {
   background-color: #fd89ea;
-  color: rgb(15, 11, 11);
+  color: rgba(15, 11, 11, 0.801);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;

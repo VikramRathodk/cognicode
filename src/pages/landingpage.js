@@ -14,7 +14,7 @@ const LandingPage = () => {
             fontSize: "50px",
             fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
           }}
-          sequence={["Learn and Grow With Cogni Code!", 800, ""]}
+          sequence={["Learn and Grow With CogniCode!", 800, ""]}
           repeat={Infinity}
         />
         <p>Navigate the Digital World with CogniCode's Expertise</p>
