@@ -7,30 +7,57 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Alice Johnson",
+      name: "Mark Watney",
       rating: 5,
       image:
-        "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+        "https://images.pexels.com/photos/567459/pexels-photo-567459.jpeg?auto=compress&cs=tinysrgb&w=600",
       testimonial:
-        "E-Learn Academy changed my life. The courses are top-notch and the instructors are fantastic!",
+        "CogniCode Web Application changed my life. The courses are top-notch and the instructors are fantastic!",
     },
     {
       id: 2,
-      name: "Bob Smith",
+      name: "Alice Johnson",
       rating: 5,
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+        "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600",
       testimonial:
         "I never thought learning online could be this engaging. The content is well-structured and easy to follow.",
     },
     {
       id: 3,
-      name: "roshani Sangle",
+      name: "Steve Harvy",
+      rating: 4,
+      image:
+        "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600",
+      testimonial:
+        "The quality of the course content on Cognicode is outstanding. The videos are clear, and the supplementary materials are helpful.",
+    },
+    {
+      id: 4,
+      name: "David Butler",
+      rating: 4,
+      image:
+        "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+      testimonial:
+        "The way the concepts are explained makes even complex topics feel understandable. It's evident that a lot of effort went into creating the content.",
+    },
+    {
+      id: 5,
+      name: "Monica Sharma",
+      rating: 5,
+      image:
+        "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=600",
+      testimonial:
+        "I appreciate how organized the platform is. It's straightforward to track my progress and access course materials.",
+    },
+    {
+      id: 6,
+      name: "Max Rhode",
       rating: 3,
       image:
-        "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+        "https://images.pexels.com/photos/769745/pexels-photo-769745.jpeg?auto=compress&cs=tinysrgb&w=600",
       testimonial:
-        "I never thought learning online could be this engaging. The content is well-structured and easy to follow.",
+        "Cognicode's interface is really user-friendly and intuitive. It's easy to navigate through the courses and find the resources I need.",
     },
     // Add more testimonials
   ];
