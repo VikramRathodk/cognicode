@@ -14,7 +14,7 @@
   ```
 - Otherwise, use:
   ```
-  npm index.js
+  node index.js
   ```
 
 ## Instructions to Run the React Project
@@ -23,7 +23,7 @@ To Run the React Project:
 
 1. Navigate to the root folder of the project (i.e., `cognicode`).
 2. Run the following command to start the React project:
-3. ``` npm index.js```
+3. ``` npm start```
 
 
 
