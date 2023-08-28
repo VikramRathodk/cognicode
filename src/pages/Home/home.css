@@ -41,7 +41,7 @@
   text-decoration: underline;
 } */
 .imageBanner{
-  background-color: goldenrod !important;
+  background-color: #b32217 !important;
   display: flex;
   justify-content: center !important;
 }
