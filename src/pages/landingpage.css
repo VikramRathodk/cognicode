@@ -1,52 +1,44 @@
 /* landingpage.css */
 
-body {
-  background-image: url('/public/assets/other.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  margin: 0;
+
+
+.content-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: cursive;
-  
+  height: 100vh;
+  background-color: transparent;
+  border: none !important;
+  opacity: inherit;
 }
 
- .content-container {
+.content {
   text-align: center;
-  color: white;
-  padding: 20px;
-  background-color: rgba(12, 10, 10, 0.116);
-   border-radius: 5px; 
-} 
-
-.cogni-code {
-  display: block;
 }
-
-.content p {
-  font-size: 30px;
+.content p{
+  font-size: 30px; 
   font-family: 'Times New Roman', Times, serif;
   color: rgb(240, 152, 44);
 }
 
+
+.cogni-code {
+  color: #e2eefa;
+  margin-bottom: 20px;
+}
+
 .moto {
-  font-size: 20px;
+  font-size: 20px; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(125, 219, 243);
 }
 
-.login-button {
-  text-decoration: none;
-}
-
 .login-button button {
+  width: fit-content;
   background-color: #fd89ea;
-  color: rgba(15, 11, 11, 0.801);
+  color: rgb(0, 0, 0);
   border: none;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
@@ -54,5 +46,5 @@ body {
 }
 
 .login-button button:hover {
-  background-color: #f5f4a8;
+  background-color: rgb(238, 221, 125);
 }

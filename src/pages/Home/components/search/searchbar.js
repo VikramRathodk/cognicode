@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
-import './searchbar.css'; // Import the CSS file for styling
+import React, { useState } from "react";
+import "./searchbar.css"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 
 const ItemList = ({ items }) => {
   return (
@@ -12,7 +15,7 @@ const ItemList = ({ items }) => {
 };
 
 const SearchBar = ({ items }) => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [filteredItems, setFilteredItems] = useState(items);
 
   const handleSearch = (event) => {
@@ -35,9 +38,13 @@ const SearchBar = ({ items }) => {
           value={searchTerm}
           onChange={handleSearch}
         />
-        <i className="search-icon fas fa-search">Icon</i>
+        <div>
+          <FontAwesomeIcon
+            icon={faSearch}
+            style={{ fontSize: "24px", color: "blue" }}
+          />
+        </div>
       </div>
-      
     </div>
   );
 };

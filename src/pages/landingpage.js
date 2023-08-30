@@ -31,7 +31,6 @@ const LandingPage = () => {
           <button>LOGIN</button>
         </Link>
       </div>
-      <div className="image"></div>
     </div>
   );
 };
