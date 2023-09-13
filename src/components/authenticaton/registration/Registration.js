@@ -12,6 +12,8 @@ const Registration = () => {
     success: false,
     error: "",
   });
+  const [selectedRole, setSelectedRole] = useState("");
+
 
   const history = useNavigate();
 
@@ -21,12 +23,26 @@ const Registration = () => {
     // console.log("Registration Details:", user);
 
     //sending data to api i.e from front end to back end
+    if (selectedRole === "instructor" || selectedRole === "student") {
+      // Include selected role in user data
+      const userData = { ...user, role: selectedRole };
 
+    
+   
+     if (!selectedRole) {
+      // Handle when the role is not selected
+      setRegistrationStatus({
+        success: false,
+        error: "Please select a role.",
+      });
+      return;
+    }
+
+    // Sending data to the registration API
     axios
-      .post("http://localhost:5477/Register", user)
-      .then(()=>{
-        history("/Login");
-        
+      .post("http://localhost:5477/auth/Register", userData)
+      .then(() => {
+        history("/Login"); // Use lowercase "/login" instead of "/Login"
       })
       .catch((error) => {
         console.error("Registration failed:", error.response.data);
@@ -35,10 +51,8 @@ const Registration = () => {
           error: "Registration failed. Please try again.",
         });
       });
-
-
-    setUser(new User("", "", "", ""));
-  };
+    };
+    };
 
   return (
     <div className="mainc">
@@ -85,6 +99,16 @@ const Registration = () => {
             required
           />
         </div>
+        <label>Select Role:</label>
+          <select
+            value={selectedRole}
+            onChange={(e) => setSelectedRole(e.target.value)}
+            required
+          >
+            <option value="">Select Role</option>
+            <option value="instructor">Instructor</option>
+            <option value="student">Student</option>
+          </select>
         <button type="submit">Register</button>
       </form>
       {registrationStatus.error && <div>{registrationStatus.error}</div>}
