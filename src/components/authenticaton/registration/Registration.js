@@ -12,6 +12,7 @@ const Registration = () => {
     success: false,
     error: "",
   });
+  const [selectedRole, setSelectedRole] = useState("");
 
   const history = useNavigate();
 
@@ -21,75 +22,98 @@ const Registration = () => {
     // console.log("Registration Details:", user);
 
     //sending data to api i.e from front end to back end
+    if (selectedRole === "instructor" || selectedRole === "student") {
+      // Include selected role in user data
+      const userData = { ...user, role: selectedRole };
 
-    axios
-      .post("http://localhost:5477/Register", user)
-      .then(()=>{
-        history("/Login");
-        
-      })
-      .catch((error) => {
-        console.error("Registration failed:", error.response.data);
+      if (!selectedRole) {
+        // Handle when the role is not selected
         setRegistrationStatus({
           success: false,
-          error: "Registration failed. Please try again.",
+          error: "Please select a role.",
         });
-      });
+        return;
+      }
 
+      // Sending data to the registration API
+      axios
+        .post("http://localhost:5477/auth/Register", userData)
+        .then(() => {
+          const userName = userData.firstName;
+          localStorage.setItem("user_name", userName);
 
-    setUser(new User("", "", "", ""));
+          history("/Login");
+        })
+        .catch((error) => {
+          console.error("Registration failed:", error.response.data);
+          setRegistrationStatus({
+            success: false,
+            error: "Registration failed. Please try again.",
+          });
+        });
+    }
   };
 
   return (
     <div className="mainc">
-    <div className="container">
-      <h2>Hello User,</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>First Name:</label>
-          <input
-            type="text"
-            value={user.firstName}
-            onChange={(e) => setUser({ ...user, firstName: e.target.value })}
-            placeholder="Enter your first name"
+      <div className="container">
+        <h2>Hello User,</h2>
+        <form onSubmit={handleSubmit}>
+          {/* <div className="form-group">
+            <label>First Name:</label>
+            <input
+              type="text"
+              value={user.firstName}
+              onChange={(e) => setUser({ ...user, firstName: e.target.value })}
+              placeholder="Enter your first name"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Last Name:</label>
+            <input
+              type="text"
+              value={user.lastName}
+              onChange={(e) => setUser({ ...user, lastName: e.target.value })}
+              placeholder="Enter your last name"
+              required
+            />
+          </div> */}
+          <div className="form-group">
+            <label>Email:</label>
+            <input
+              type="email"
+              value={user.email}
+              onChange={(e) => setUser({ ...user, email: e.target.value })}
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Password:</label>
+            <input
+              type="password"
+              value={user.password}
+              onChange={(e) => setUser({ ...user, password: e.target.value })}
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <label>Select Role:</label>
+          <select
+            value={selectedRole}
+            onChange={(e) => setSelectedRole(e.target.value)}
             required
-          />
-        </div>
-        <div className="form-group">
-          <label>Last Name:</label>
-          <input
-            type="text"
-            value={user.lastName}
-            onChange={(e) => setUser({ ...user, lastName: e.target.value })}
-            placeholder="Enter your last name"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Email:</label>
-          <input
-            type="email"
-            value={user.email}
-            onChange={(e) => setUser({ ...user, email: e.target.value })}
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Password:</label>
-          <input
-            type="password"
-            value={user.password}
-            onChange={(e) => setUser({ ...user, password: e.target.value })}
-            placeholder="Enter your password"
-            required
-          />
-        </div>
-        <button type="submit">Register</button>
-      </form>
-      {registrationStatus.error && <div>{registrationStatus.error}</div>}
-      <Link to="/login">Login Page</Link>
-    </div>
+          >
+            <option value="">Select Role</option>
+            <option value="instructor">Instructor</option>
+            <option value="student">Student</option>
+          </select>
+          <button type="submit">Register</button>
+        </form>
+        {registrationStatus.error && <div>{registrationStatus.error}</div>}
+        <Link to="/login">Login Page</Link>
+      </div>
     </div>
   );
 };

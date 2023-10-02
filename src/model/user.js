@@ -3,14 +3,14 @@
 
 // User.js
 class User {
-    constructor(firstName, lastName, email, password) {
+    constructor(firstName, lastName, email, password,role) {
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
       this.password = password;
+      this.role = role
     }
   
-    // You can add additional methods to the User class if needed, such as validation methods or API calls for user registration.
   }
   
   export default User;

@@ -6,6 +6,11 @@ const courseSchema = new mongoose.Schema({
     required: true,
     unique: true, 
   },
+  instructorEmail: {
+    type: String, 
+    required: true,
+    unique: true, 
+  },
   title: {
     type: String,
     required: true,
