@@ -1,31 +1,42 @@
 /* navbar.css */
 .nav-wrapper {
   display: flex;
-  justify-content: space-between; /* Change to space-between */
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   background-color: #101631;
   color: #f1e9e9;
-  padding: 20px;
+  padding: 1px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #title {
-  font-size: 36px;
+  font-size: 20px;
   text-align: center;
   padding: 20px;
+}
+
+.nav-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-content {
+  flex-grow: 1;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   margin: 0;
   padding: 0;
+  transition: transform 0.3s ease;
 }
-
 .nav-item {
-  font-size: 20px;
   border: none;
+  padding: 10px;
 }
 
 .nav-link {
@@ -40,19 +51,18 @@
 }
 
 button {
+  width: fit-content;
   background-color: rgb(16, 22, 49);
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20px; /* Added padding for a more comfortable click area */
+  padding: 10px;
   cursor: pointer;
-  color: #ffffff; /* Changed text color to white */
+  color: #ffffff;
   font-size: 16px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 button:hover {
-  background-color:rgb(42, 50, 92);
+  background-color: rgb(42, 50, 92);
   color: #99eb6a;
   border: none;
 }
@@ -62,18 +72,46 @@ button:hover {
   .nav-wrapper {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  #title {
+    font-size: 28px;
+    padding: 10px 0;
+  }
+
+  .nav-toggle {
+    display: block; /* Show toggle icon for small screens */
   }
 
   .nav-list {
     flex-direction: column;
     gap: 10px;
+    transform: translateY(-100%); /* Hide nav list initially */
+    background-color: #101631;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-list-open {
+    transform: translateY(0); /* Show nav list when open */
+    z-index: 1;
   }
 
   .nav-item {
     font-size: 14px;
   }
 
+  .nav-link {
+    font-size: 14px;
+  }
+
   button {
     font-size: 14px;
+    margin-top: 10px;
   }
 }

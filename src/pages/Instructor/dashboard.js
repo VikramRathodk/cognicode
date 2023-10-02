@@ -1,7 +1,8 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import "./dashboard.css";
 import CourseForm from "./CourseForm";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 // Separate components for each task
 function ManageCourses() {
@@ -19,7 +20,9 @@ function Analytics() {
 export default function Dashboard() {
   const [activeTask, setActiveTask] = useState(null);
 
-  
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const userName = searchParams.get("name");
 
   const handleSidebarCardClick = (taskName) => {
     setActiveTask(taskName);
@@ -28,6 +31,10 @@ export default function Dashboard() {
   const history = useNavigate();
 
   const handleLogout = async () => {
+    // Clear the token from client-side storage 
+    sessionStorage.removeItem("token");
+
+    // Redirect the user to the login page
     history("/login");
   };
 
@@ -43,7 +50,7 @@ export default function Dashboard() {
         return (
           <div className="card">
             <h3>Create New Course</h3>
-            <CourseForm />
+            <CourseForm instructorEmail={userName} />
           </div>
         );
     }
@@ -51,9 +58,11 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard-container">
-      {/* <h3 className="instructor-name">{instructorName}</h3>{" "} */}
       <div className="sidebar">
         <h2 className="sidebar-heading">Instructor Dashboard</h2>
+
+        <h2>{userName ? <p>Welcome, {userName}</p> : <p>Welcome, Guest</p>}</h2>
+
         <div
           className="card sidebar-card"
           onClick={() => handleSidebarCardClick("manage-courses")}

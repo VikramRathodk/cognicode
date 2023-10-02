@@ -1,47 +1,11 @@
-/* HomePage.css
-.course-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-}
-.navBar,
-.searchBar,
-.imageBanner {
-  margin-bottom: 15px;
-}
-
-.App {
-  font-family: Arial, sans-serif;
+.main_home{
+  background-color: #131632 !important;
   padding: 20px;
-  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
-
-.App p {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-
-
-.footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: #fff;
-}
-
-.footer a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-} */
 .imageBanner{
-  background-color: #b32217 !important;
+  background-color: #131632 !important;
   display: flex;
   justify-content: center !important;
 }
@@ -51,11 +15,15 @@ padding: 20px;
 border-radius: 10px;
 
 }
-
+.studentName{
+background-color: #ffffff;
+border-radius: 8px;
+font-family: 'Courier New', Courier, monospace;
+padding: 4px;
+}
 .popular-courses-section h2{
 display: flex;
-align-items: start;
-flex-direction: column;
+align-items: flex-start; flex-direction: column;
 margin-left: 30px;
 margin-bottom: 10px;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

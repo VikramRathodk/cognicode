@@ -43,7 +43,9 @@ const CoursesList = () => {
               </div>
 
               <h2 className="course-title">{course.title}</h2>
-              <div className="course-description">{course.description}</div>
+              <div className="course-description">
+                {course.description.substring(0, 50)}
+              </div>
               <p className="course-price">Price: ${course.price}</p>
             </NavLink>
           </div>
